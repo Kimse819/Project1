@@ -20,7 +20,7 @@
         <tr>
             <td>${board.id}</td>
             <td>
-                <a href="/board/view?id=${board.id}">${board.title}</a>
+                <a href="/board?id=${board.id}">${board.title}</a>
             </td>
             <td>${board.writer}</td>
         </tr>
