@@ -6,10 +6,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(rollbackFor = Exception.class)
 public class BoardService {
+
     private final BoardMapper mapper;
 
     public void add(Board board) {
@@ -20,7 +23,8 @@ public class BoardService {
         return mapper.selectById(id);
     }
 
-    public Object list() {
-        return null;
+    public List<Board> list() {
+
+        return mapper.selectAll();
     }
 }
