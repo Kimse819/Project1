@@ -13,6 +13,9 @@ CREATE TABLE board
     inserted DATETIME      NOT NULL DEFAULT NOW()
 );
 
+ALTER TABLE member
+    ADD COLUMN inserted DATETIME NOT NULL DEFAULT NOW();
+
 SELECT *
 FROM board;
 
@@ -27,3 +30,4 @@ CREATE TABLE member
 
 SELECT *
 FROM member;
+
