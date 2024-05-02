@@ -34,7 +34,7 @@ public class MemberService {
     public void modify(Member member) {
         mapper.update(member);
     }
-
+ 
     public String emailCheck(String email) {
         Member member = mapper.selectByEmail(email);
         if (member == null) {
